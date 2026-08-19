@@ -1,0 +1,804 @@
+/* ========================================
+   RESPONSIVE DESIGN - MOBILE & TABLET
+   Desktop (1024px+) remains unchanged
+   ======================================== */
+
+/* ========================================
+   TABLET STYLES (768px - 1023px)
+   ======================================== */
+@media (max-width: 1023px) and (min-width: 768px) {
+
+    /* Typography adjustments */
+    h1 {
+        font-size: 36px;
+    }
+
+    h2 {
+        font-size: 28px;
+    }
+
+    h3 {
+        font-size: 20px;
+    }
+
+    /* Container padding */
+    .container {
+        padding-left: 24px;
+        padding-right: 24px;
+    }
+
+    /* Section padding */
+    .section-padding {
+        padding-top: 48px;
+        padding-bottom: 48px;
+    }
+
+    /* Editor Page - Tablet Layout */
+    .editor-layout {
+        flex-direction: column;
+    }
+
+    .editor-sidebar {
+        width: 100%;
+        max-width: none;
+        border-right: none;
+        border-bottom: 1px solid #F1F5F9;
+    }
+
+    .editor-canvas {
+        width: 100%;
+        height: 60vh;
+    }
+
+    .editor-tools-panel {
+        width: 100%;
+        max-width: none;
+    }
+
+    /* Dashboard - Tablet Grid */
+    .dashboard-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* Pricing Cards - 2 columns on tablet */
+    .pricing-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* Modal adjustments */
+    .modal-content {
+        width: 90%;
+        max-width: 600px;
+    }
+
+    /* Navigation */
+    .nav-menu {
+        padding: 12px 16px;
+    }
+
+    /* Buttons */
+    .btn-primary,
+    .btn-secondary,
+    .btn-gradient {
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+
+    /* Cards */
+    .card {
+        padding: 20px;
+    }
+
+    /* Image grid for gallery */
+    .gallery-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 12px;
+    }
+
+    /* Tool panels */
+    .tool-panel {
+        padding: 16px;
+    }
+
+    /* Stats */
+    .stat-number {
+        font-size: 2.5rem;
+    }
+}
+
+/* ========================================
+   MOBILE STYLES (< 768px)
+   ======================================== */
+@media (max-width: 767px) {
+
+    /* Typography - Mobile */
+    h1 {
+        font-size: 28px;
+        line-height: 1.3;
+    }
+
+    h2 {
+        font-size: 24px;
+        line-height: 1.3;
+    }
+
+    h3 {
+        font-size: 18px;
+        line-height: 1.4;
+    }
+
+    h4,
+    h5,
+    h6 {
+        font-size: 16px;
+    }
+
+    /* Base text */
+    body {
+        font-size: 14px;
+    }
+
+    /* Container */
+    .container {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+
+    /* Section padding */
+    .section-padding {
+        padding-top: 32px;
+        padding-bottom: 32px;
+    }
+
+    /* ========================================
+     EDITOR PAGE - MOBILE & TABLET LAYOUT (< 1024px)
+     ======================================== */
+
+    .editor-main-layout .editor-main-content {
+        height: calc(100vh - 64px - 82px) !important;
+        /* Header (64px) + Bottom Nav (approx 82px) */
+    }
+
+    /* Header Nav Responsiveness */
+    .editor-main-layout header .flex-col.justify-center {
+        display: none !important;
+        /* Hide breadcrumbs */
+    }
+
+    .editor-main-layout header {
+        padding-left: 12px !important;
+        padding-right: 12px !important;
+    }
+
+    .editor-main-layout header .gap-6 {
+        gap: 8px !important;
+    }
+
+    /* Adjust credits display in header */
+    .editor-main-layout header .hidden.md\:flex {
+        display: flex !important;
+        /* Force show credits count if hidden by tailwind md: */
+        padding: 4px 8px !important;
+    }
+
+    .editor-main-layout header .hidden.md\:flex span {
+        display: none;
+        /* Hide "Credits left" text */
+    }
+
+    /* Sidebars and Panels */
+    .editor-left-sidebar,
+    .editor-right-sidebar {
+        border-radius: 0 !important;
+        height: 100% !important;
+        width: 100% !important;
+        position: absolute !important;
+        top: 0;
+        left: 0;
+        z-index: 40;
+    }
+
+    /* Tool Panels Scroll Area */
+    .editor-left-sidebar div[class*="overflow-y-auto"] {
+        padding-bottom: 100px !important;
+    }
+
+    /* Canvas centering and scaling */
+    .editor-canvas-area {
+        background-color: #f8fafc !important;
+        padding-top: 0 !important;
+        height: 100% !important;
+    }
+
+    .editor-canvas-area .checkerboard-bg {
+        padding: 8px !important;
+        align-items: center !important;
+        justify-content: center !important;
+    }
+
+    .editor-canvas-area img,
+    .editor-canvas-area video {
+        max-height: 50vh !important;
+        object-fit: contain !important;
+    }
+
+    /* Toolbar adjustments */
+    /* Toolbar adjustments handled in JSX */
+
+
+    /* ========================================
+     DASHBOARD - MOBILE
+     ======================================== */
+
+    .dashboard-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .dashboard-card {
+        padding: 16px;
+    }
+
+    .dashboard-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+    }
+
+    /* Stats cards */
+    .stats-grid {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    .stat-card {
+        padding: 16px;
+    }
+
+    .stat-number {
+        font-size: 2rem;
+    }
+
+    /* ========================================
+     PRICING PAGE - MOBILE
+     ======================================== */
+
+    .pricing-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .pricing-card {
+        padding: 24px 20px;
+    }
+
+    .pricing-features {
+        font-size: 13px;
+    }
+
+    /* ========================================
+     NAVIGATION - MOBILE
+     ======================================== */
+
+    /* Mobile hamburger menu */
+    .mobile-menu-button {
+        display: block;
+    }
+
+    .desktop-nav {
+        display: none;
+    }
+
+    .mobile-menu {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: white;
+        z-index: 1000;
+        transform: translateX(-100%);
+        transition: transform 0.3s ease;
+    }
+
+    .mobile-menu.open {
+        transform: translateX(0);
+    }
+
+    .mobile-menu-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.5);
+        z-index: 999;
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 0.3s ease;
+    }
+
+    .mobile-menu-overlay.open {
+        opacity: 1;
+        pointer-events: all;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        padding: 20px;
+        gap: 16px;
+    }
+
+    .nav-link {
+        width: 100%;
+        padding: 12px 16px;
+        border-radius: 8px;
+    }
+
+    /* ========================================
+     MODALS - MOBILE
+     ======================================== */
+
+    .modal-content {
+        width: 95%;
+        max-width: none;
+        margin: 20px;
+        max-height: 90vh;
+        overflow-y: auto;
+    }
+
+    .modal-header {
+        padding: 16px;
+    }
+
+    .modal-body {
+        padding: 16px;
+    }
+
+    .modal-footer {
+        padding: 16px;
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .modal-footer button {
+        width: 100%;
+    }
+
+    /* ========================================
+     FORMS - MOBILE
+     ======================================== */
+
+    .form-group {
+        margin-bottom: 16px;
+    }
+
+    .form-input {
+        padding: 12px;
+        font-size: 16px;
+        /* Prevents zoom on iOS */
+    }
+
+    .form-label {
+        font-size: 14px;
+        margin-bottom: 6px;
+    }
+
+    /* ========================================
+     BUTTONS - MOBILE
+     ======================================== */
+
+    .btn-primary,
+    .btn-secondary,
+    .btn-gradient {
+        padding: 12px 24px;
+        font-size: 14px;
+        width: 100%;
+        justify-content: center;
+    }
+
+    .btn-group {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .btn-group button {
+        width: 100%;
+    }
+
+    /* ========================================
+     CARDS - MOBILE
+     ======================================== */
+
+    .card {
+        padding: 16px;
+        border-radius: 12px;
+    }
+
+    .card-header {
+        padding: 12px 16px;
+    }
+
+    .card-body {
+        padding: 16px;
+    }
+
+    /* ========================================
+     GALLERY/GRID - MOBILE
+     ======================================== */
+
+    .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 8px;
+    }
+
+    .image-card {
+        aspect-ratio: 1;
+    }
+
+    /* Creations bar */
+    .creations-bar {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .creations-grid {
+        display: flex;
+        gap: 8px;
+        padding: 8px;
+    }
+
+    .creation-item {
+        min-width: 80px;
+        flex-shrink: 0;
+    }
+
+    /* ========================================
+     PROFILE/DROPDOWN - MOBILE
+     ======================================== */
+
+    .profile-dropdown {
+        position: fixed;
+        top: auto;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        transform: translateY(100%);
+        border-radius: 16px 16px 0 0;
+        box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    .profile-dropdown.open {
+        transform: translateY(0);
+    }
+
+    /* ========================================
+     AI TOOL PANELS - MOBILE
+     ======================================== */
+
+    /* Upscale panel */
+    .upscale-presets {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+    }
+
+    .upscale-preset-card {
+        padding: 12px;
+    }
+
+    /* Background templates */
+    .template-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+    }
+
+    /* Mystic generator */
+    .mystic-mode-grid {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    .mystic-settings {
+        flex-direction: column;
+    }
+
+    /* ========================================
+     UTILITY CLASSES - MOBILE
+     ======================================== */
+
+    /* Hide on mobile */
+    .hide-mobile {
+        display: none !important;
+    }
+
+    /* Show only on mobile */
+    .show-mobile {
+        display: block !important;
+    }
+
+    /* Text alignment */
+    .mobile-text-center {
+        text-align: center;
+    }
+
+    /* Spacing */
+    .mobile-mt-4 {
+        margin-top: 16px;
+    }
+
+    .mobile-mb-4 {
+        margin-bottom: 16px;
+    }
+
+    .mobile-px-4 {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+
+    .mobile-py-4 {
+        padding-top: 16px;
+        padding-bottom: 16px;
+    }
+
+    /* ========================================
+     SCROLLBAR - MOBILE
+     ======================================== */
+
+    ::-webkit-scrollbar {
+        width: 4px;
+        height: 4px;
+    }
+
+    /* ========================================
+     TOUCH IMPROVEMENTS
+     ======================================== */
+
+    /* Larger touch targets */
+    button,
+    a,
+    input,
+    select,
+    textarea {
+        min-height: 44px;
+        /* iOS recommended touch target */
+    }
+
+    /* Prevent text selection on buttons */
+    button {
+        -webkit-tap-highlight-color: transparent;
+        user-select: none;
+    }
+
+    /* Smooth scrolling */
+    .scroll-container {
+        -webkit-overflow-scrolling: touch;
+    }
+}
+
+/* ========================================
+   SMALL MOBILE (< 375px)
+   ======================================== */
+@media (max-width: 374px) {
+    h1 {
+        font-size: 24px;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+
+    .container {
+        padding-left: 12px;
+        padding-right: 12px;
+    }
+
+    .btn-primary,
+    .btn-secondary,
+    .btn-gradient {
+        padding: 10px 20px;
+        font-size: 13px;
+    }
+
+    .gallery-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ========================================
+   LANDSCAPE MODE - MOBILE
+   ======================================== */
+@media (max-width: 767px) and (orientation: landscape) {
+    .editor-canvas {
+        height: calc(100vh - 80px);
+    }
+
+    .modal-content {
+        max-height: 85vh;
+    }
+
+    /* Adjust mobile nav for landscape */
+    .editor-mobile-nav {
+        padding: 4px;
+    }
+
+    .editor-mobile-nav-item {
+        padding: 4px;
+        font-size: 10px;
+    }
+
+    .editor-mobile-nav-item svg {
+        width: 18px;
+        height: 18px;
+    }
+}
+
+/* ========================================
+/* ========================================
+   GALLERY & MODAL - MOBILE & TABLET (All < 1024px)
+   ======================================== */
+@media (max-width: 1023px) {
+
+    /* Common: Side Spacing */
+    .gallery-container {
+        padding-left: 24px !important;
+        padding-right: 24px !important;
+    }
+
+    /* Common: Modal Scroll Support */
+    .modal-content-wrapper {
+        max-height: 80vh !important;
+        overflow-y: auto !important;
+        overflow-x: hidden !important;
+        -webkit-overflow-scrolling: touch;
+    }
+}
+
+/* TABLET SPECIFIC (768px - 1023px) */
+@media (min-width: 768px) and (max-width: 1023px) {
+
+    /* 2 Images per row */
+    .gallery-grid {
+        column-count: 2 !important;
+        columns: 2 !important;
+        display: block !important;
+        column-gap: 20px !important;
+    }
+
+    .gallery-grid>div {
+        max-width: 100% !important;
+        margin-bottom: 24px !important;
+        break-inside: avoid;
+        width: 100% !important;
+    }
+
+    /* Hero Section - Center Text on Tablet */
+    .hero-content {
+        text-align: center !important;
+        align-items: center !important;
+        display: flex !important;
+        flex-direction: column !important;
+    }
+
+    .hero-buttons {
+        justify-content: center !important;
+    }
+}
+
+/* MOBILE SPECIFIC (< 768px) */
+@media (max-width: 767px) {
+
+    /* 1 Image per row */
+    .gallery-grid {
+        grid-template-columns: 1fr !important;
+        columns: 1 !important;
+        column-count: 1 !important;
+        display: block !important;
+    }
+
+    .gallery-grid>div {
+        max-width: 340px !important;
+        margin: 0 auto 24px auto !important;
+        width: 100% !important;
+    }
+}
+
+/* ========================================
+   DASHBOARD PAGES - MOBILE & TABLET
+   ======================================== */
+@media (max-width: 1023px) {
+
+    /* Main Dashboard Container */
+    .dashboard-page main {
+        padding: 24px !important;
+    }
+
+    /* Dashboard Header Refinement */
+    .dashboard-page header {
+        padding: 0 16px !important;
+        gap: 12px !important;
+    }
+
+    /* BILLING VIEW */
+    .billing-view h2 {
+        font-size: 24px !important;
+    }
+
+    .billing-view .flex.items-center.justify-between.mb-8 {
+        flex-direction: column !important;
+        align-items: flex-start !important;
+        gap: 16px !important;
+    }
+
+    .billing-view table {
+        min-width: 600px;
+        /* Ensure table scrolls */
+    }
+
+    /* USAGE VIEW */
+    .usage-view .flex.flex-col.md\:flex-row {
+        flex-direction: column !important;
+        gap: 16px !important;
+    }
+
+    .usage-view button {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .usage-view table {
+        min-width: 600px;
+    }
+
+    .usage-view table th,
+    .usage-view table td {
+        padding-left: 16px !important;
+        padding-right: 16px !important;
+    }
+
+
+    /* ACCOUNT SETTINGS VIEW */
+    .account-settings-view h2 {
+        font-size: 24px !important;
+    }
+
+    .account-settings-view .flex.items-center.justify-between.py-4 {
+        flex-direction: column !important;
+        align-items: flex-start !important;
+        gap: 8px !important;
+    }
+
+    /* Active Session Items */
+    .account-settings-view .flex.items-center.justify-between.p-5 {
+        flex-direction: column !important;
+        align-items: flex-start !important;
+        gap: 16px !important;
+    }
+
+    .account-settings-view .flex.items-center.justify-between.p-5>div {
+        width: 100%;
+    }
+
+    .account-settings-view .flex.items-center.justify-between.p-5 button {
+        width: 100%;
+        margin-top: 8px;
+    }
+}
+
+/* ========================================
+   PRINT STYLES
+   ======================================== */
+@media print {
+
+    .no-print,
+    .editor-sidebar,
+    .editor-tools-panel,
+    .mobile-menu,
+    .editor-mobile-nav {
+        display: none !important;
+    }
+
+    .editor-canvas {
+        width: 100%;
+        height: auto;
+    }
+}
